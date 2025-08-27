@@ -31,10 +31,10 @@ header {
 .student-section {
   flex: 1;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
+  padding: 15px;
 }
 
 /* Card Design */
@@ -42,10 +42,10 @@ header {
   background: white;
   display: flex;
   align-items: center;
-  padding: 15px 18px; /* সামান্য বেশি প্যাডিং */
+  padding: 15px 18px;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-  width: 100%;
+  width: calc(50% - 15px); /* দুই কলাম মোবাইলেও */
   max-width: 380px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeIn 0.6s ease;
@@ -58,7 +58,7 @@ header {
 
 /* Profile Image */
 .profile-pic img {
-  width: 100px;  /* আগের 70px থেকে বড় করা */
+  width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
@@ -120,9 +120,10 @@ footer span {
 /* Responsive */
 @media (max-width: 600px) {
   .card {
+    width: calc(50% - 10px); /* দুই কলাম মোবাইলে */
     flex-direction: column;
     text-align: center;
-    padding: 18px 15px; /* মোবাইলে সামান্য বেশি স্পেস */
+    padding: 15px;
   }
   .profile-pic img {
     margin: 0 0 10px 0;
